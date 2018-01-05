@@ -1,0 +1,22 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:form="sap.ui.layout.form">
+	<Panel width="auto" headerText="{i18n>xtit.comDetails}">
+		<form:SimpleForm id="comDetails" editable="false" layout="ResponsiveGridLayout" labelSpanL="4" labelSpanM="12" adjustLabelSpan="false"
+			emptySpanL="0" emptySpanM="0" columnsL="2" columnsM="2">
+			<form:content>
+				<List id="companyList">
+					<items>
+						<StandardListItem icon="sap-icon://building" title="{CompanyName}"/>
+						<StandardListItem icon="sap-icon://email" title="{EmailAddress}"/>
+						<StandardListItem icon="sap-icon://world" title="{WebAddress}"/>
+						<StandardListItem icon="sap-icon://phone" title="{PhoneNumber}"/>
+						<StandardListItem icon="sap-icon://map" title="{City}"/>
+					</items>
+				</List>
+			</form:content>
+		</form:SimpleForm>
+	</Panel>
+	<Panel class="sapUiResponsiveMargin sapUiHideOnPhone" width="auto" headerText="{i18n>xtit.mapTitle}">
+		<Image
+			src="{ parts: [ 'Street', 'PostalCode', 'City', 'Country' ], formatter: '.formatter.formatMapUrl' }"/>
+	</Panel>
+</core:FragmentDefinition>

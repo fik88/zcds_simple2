@@ -1,0 +1,21 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:form="sap.ui.layout.form">
+	<Panel class="sapUiResponsiveMargin" width="auto" headerText="{i18n>xtit.poDetails}">
+		<form:SimpleForm id="poDetails" editable="false" layout="ResponsiveGridLayout" labelSpanL="4" labelSpanM="12" adjustLabelSpan="false"
+			emptySpanL="0" emptySpanM="0" columnsL="2" columnsM="2">
+			<form:content>
+				<Label text="{/#PoDataSet/PoId/@sap:label}"/>
+				<Text text="{PoId}"/>
+				<Label text="{/#PoDataSet/PoItemPos/@sap:label}"/>
+				<Text text="{PoItemPos}"/>
+				<Label text="{/#PoDataSet/ProductId/@sap:label}"/>
+				<Text text="{ProductId}"/>
+				<Label text="{/#PoDataSet/Category/@sap:label}"/>
+				<Text text="{Category}"/>
+				<Label text="{/#PoDataSet/Quantity/@sap:label}"/>
+				<Text text="{= ${Quantity} + ' ' + ${QuantityUnit}}"/>
+				<Label text="{/#PoDataSet/GrossAmount/@sap:label}"/>
+				<Text text="{= ${GrossAmount} + ' ' + ${CurrencyCode}}"/>
+			</form:content>
+		</form:SimpleForm>
+	</Panel>
+</core:FragmentDefinition>
